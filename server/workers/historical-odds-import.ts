@@ -111,7 +111,7 @@ export async function syncHistoricalOdds(leagueId: number, seasonYear: number) {
   
   // Add common overrides dynamically
   const findTeamId = (partialName: string) => {
-      for (const [name, id] of teamMap.entries()) {
+      for (const [name, id] of Array.from(teamMap.entries())) {
           if (name.includes(partialName)) return id;
       }
       return null;

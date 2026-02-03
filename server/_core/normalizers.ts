@@ -277,61 +277,101 @@ export function normalizePlayerStatistics(
   league: League,
   season: Season
 ) {
-  // Parse JSON statistics if needed, or use fields
-  // Since we store raw JSON in statistics column, we can use that or reconstruct
-  // But we also mapped columns. Let's reconstruct from columns for type safety.
-  
-  // Actually, the prompt says "always get updated data".
-  // The DB `statistics` column holds the raw JSON from API-Football.
-  // We can return that or build it.
-  // The `playerStatistics` table has many columns mapped.
-  
-  // Let's use the stored JSON if available for full fidelity, or build it.
-  const rawStats = typeof stats.statistics === 'string' 
-    ? JSON.parse(stats.statistics) 
-    : stats.statistics;
-    
-  if (rawStats) {
-    return {
-      player: {
-        id: player.id,
-        name: player.name,
-        firstname: player.firstname,
-        lastname: player.lastname,
-        age: player.age,
-        birth: {
-          date: player.birthDate?.toISOString().split("T")[0],
-          place: player.birthPlace,
-          country: player.birthCountry,
-        },
-        nationality: player.nationality,
-        height: player.height,
-        weight: player.weight,
-        injured: player.injured,
-        photo: player.photo,
+  return {
+    player: {
+      id: player.id,
+      name: player.name,
+      firstname: player.firstname,
+      lastname: player.lastname,
+      age: player.age,
+      birth: {
+        date: player.birthDate?.toISOString().split("T")[0],
+        place: player.birthPlace,
+        country: player.birthCountry,
       },
-      statistics: [
-        {
-          team: {
-            id: team.id,
-            name: team.name,
-            logo: team.logo,
-          },
-          league: {
-            id: league.id,
-            name: league.name,
-            country: "World", // TODO
-            logo: league.logo,
-            flag: null,
-            season: season.year,
-          },
-          ...rawStats // Spread the raw stats (games, goals, etc.)
-        }
-      ]
-    };
-  }
-  
-  return null; // Fallback
+      nationality: player.nationality,
+      height: player.height,
+      weight: player.weight,
+      injured: player.injured,
+      photo: player.photo,
+    },
+    statistics: [
+      {
+        team: {
+          id: team.id,
+          name: team.name,
+          logo: team.logo,
+        },
+        league: {
+          id: league.id,
+          name: league.name,
+          country: "World", // TODO
+          logo: league.logo,
+          flag: null,
+          season: season.year,
+        },
+        games: {
+          appearences: stats.appearences,
+          lineups: stats.lineups,
+          minutes: stats.minutes,
+          number: null,
+          position: stats.position,
+          rating: stats.rating,
+          captain: stats.captain,
+        },
+        substitutes: {
+          in: stats.substitutesIn,
+          out: stats.substitutesOut,
+          bench: stats.substitutesBench,
+        },
+        shots: {
+          total: stats.shotsTotal,
+          on: stats.shotsOn,
+        },
+        goals: {
+          total: stats.goalsTotal,
+          conceded: stats.goalsConceded,
+          assists: stats.goalsAssists,
+          saves: stats.goalsSaves,
+        },
+        passes: {
+          total: stats.passesTotal,
+          key: stats.passesKey,
+          accuracy: stats.passesAccuracy,
+        },
+        tackles: {
+          total: stats.tacklesTotal,
+          blocks: stats.tacklesBlocks,
+          interceptions: stats.tacklesInterceptions,
+        },
+        duels: {
+          total: stats.duelsTotal,
+          won: stats.duelsWon,
+        },
+        dribbles: {
+          attempts: stats.dribblesAttempts,
+          success: stats.dribblesSuccess,
+          past: stats.dribblesPast,
+        },
+        fouls: {
+          drawn: stats.foulsDrawn,
+          committed: stats.foulsCommitted,
+        },
+        cards: {
+          yellow: stats.cardsYellow,
+          yellowred: stats.cardsYellowred,
+          red: stats.cardsRed,
+        },
+        penalty: {
+          won: stats.penaltyWon,
+          commited: stats.penaltyCommitted,
+          scored: stats.penaltyScored,
+          missed: stats.penaltyMissed,
+          saved: stats.penaltySaved,
+        },
+      }
+    ]
+  };
 }
 
 /**
@@ -375,6 +415,88 @@ export function normalizeInjury(
   };
 }
 
+
+/**
+ * Normalize coach to API-Football format
+ */
+export function normalizeCoach(
+  coach: Coach,
+  team: Team | null,
+  career: any[] = []
+) {
+  return {
+    id: coach.id,
+    name: coach.name,
+    firstname: coach.firstname,
+    lastname: coach.lastname,
+    age: coach.age,
+    birth: {
+      date: coach.birthDate?.toISOString().split("T")[0],
+      place: coach.birthPlace,
+      country: coach.birthCountry,
+    },
+    nationality: coach.nationality,
+    height: coach.height,
+    weight: coach.weight,
+    photo: coach.photo,
+    team: team ? {
+      id: team.id,
+      name: team.name,
+      logo: team.logo,
+    } : null,
+    career: career,
+  };
+}
+
+/**
+ * Normalize transfer to API-Football format
+ */
+export function normalizeTransfer(
+  transfer: Transfer,
+  player: Player,
+  teamIn: Team | null,
+  teamOut: Team | null
+) {
+  return {
+    player: {
+      id: player.id,
+      name: player.name,
+    },
+    update: transfer.date.toISOString(),
+    transfers: [
+      {
+        date: transfer.date.toISOString().split("T")[0],
+        type: transfer.type,
+        teams: {
+          in: teamIn ? {
+            id: teamIn.id,
+            name: teamIn.name,
+            logo: teamIn.logo,
+          } : null,
+          out: teamOut ? {
+            id: teamOut.id,
+            name: teamOut.name,
+            logo: teamOut.logo,
+          } : null,
+        },
+      },
+    ],
+  };
+}
+
+/**
+ * Normalize trophy to API-Football format
+ */
+export function normalizeTrophy(
+  trophy: Trophy
+) {
+  return {
+    league: trophy.league,
+    country: trophy.country,
+    season: trophy.season,
+    place: trophy.place,
+  };
+}
 
 /**
  * Helper to create standardized API response wrapper

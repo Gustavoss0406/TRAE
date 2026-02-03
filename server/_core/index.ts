@@ -3,6 +3,9 @@ import express from "express";
 import { createServer } from "http";
 import net from "net";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
+import { generateOpenApiDocument } from 'trpc-openapi';
+import { createOpenApiExpressMiddleware } from 'trpc-openapi';
+import swaggerUi from 'swagger-ui-express';
 import { registerOAuthRoutes } from "./oauth";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
@@ -49,6 +52,26 @@ async function startServer() {
       createContext,
     })
   );
+
+  // OpenAPI REST API
+  app.use(
+    "/api",
+    createOpenApiExpressMiddleware({
+      router: appRouter,
+      createContext,
+    } as any)
+  );
+
+  // Swagger UI
+  const openApiDocument = generateOpenApiDocument(appRouter, {
+    title: "Football Data Platform API",
+    description: "Comprehensive football data API",
+    version: "1.0.0",
+    baseUrl: process.env.VITE_API_URL || "http://localhost:3000/api",
+  });
+
+  app.use("/docs", swaggerUi.serve, swaggerUi.setup(openApiDocument));
+
   // development mode uses Vite, production mode uses static files
   if (process.env.NODE_ENV === "development") {
     await setupVite(app, server);

@@ -1,9 +1,10 @@
 import { NOT_ADMIN_ERR_MSG, UNAUTHED_ERR_MSG } from '@shared/const';
 import { initTRPC, TRPCError } from "@trpc/server";
+import { OpenApiMeta } from 'trpc-openapi';
 import superjson from "superjson";
 import type { TrpcContext } from "./context";
 
-const t = initTRPC.context<TrpcContext>().create({
+const t = initTRPC.context<TrpcContext>().meta<OpenApiMeta>().create({
   transformer: superjson,
 });
 

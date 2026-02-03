@@ -229,7 +229,7 @@ export async function scrapeCoaches(leagueName: string) {
 
       // Fuzzy Match Loop
       if (!team) {
-          for (const [key, t] of teamMap.entries()) {
+          for (const [key, t] of Array.from(teamMap.entries())) {
               if (key.includes(normalizedScraped) || normalizedScraped.includes(key)) {
                   team = t;
                   break;

@@ -7,7 +7,7 @@
 export interface SyncLog {
   workerId: string;
   timestamp: Date;
-  source: "football-data.org" | "cache" | "d1";
+  source: "football-data.org" | "cache" | "d1" | "static-list";
   recordsProcessed: number;
   recordsUpdated: number;
   recordsInserted: number;

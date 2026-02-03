@@ -20,6 +20,7 @@ import { createApiResponse } from "./_core/normalizers";
  * Returns betting odds for fixtures (fair odds calculated via Poisson regression)
  */
 const oddsProcedure = publicProcedure
+  .meta({ openapi: { method: 'GET', path: '/odds', tags: ['Odds'] } })
   .input(
     z.object({
       fixture: z.number().optional(),
@@ -280,6 +281,7 @@ const oddsProcedure = publicProcedure
  * Returns match predictions based on ELO ratings
  */
 const predictionsProcedure = publicProcedure
+  .meta({ openapi: { method: 'GET', path: '/predictions', tags: ['Predictions'] } })
   .input(
     z.object({
       fixture: z.number().optional(),

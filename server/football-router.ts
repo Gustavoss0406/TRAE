@@ -30,6 +30,9 @@ import {
   normalizeFixture,
   normalizePlayerStatistics,
   normalizeInjury,
+  normalizeCoach,
+  normalizeTransfer,
+  normalizeTrophy,
   createApiResponse,
 } from "./_core/normalizers";
 import { CACHE_TTL, cacheMiddleware } from "./_core/cache";
@@ -37,7 +40,9 @@ import { CACHE_TTL, cacheMiddleware } from "./_core/cache";
 /**
  * Status endpoint - returns API status and version
  */
-const statusProcedure = publicProcedure.query(async () => {
+const statusProcedure = publicProcedure
+  .meta({ openapi: { method: 'GET', path: '/status', tags: ['System'] } })
+  .query(async () => {
   return createApiResponse({
     account: {
       firstname: "Football",
@@ -59,7 +64,9 @@ const statusProcedure = publicProcedure.query(async () => {
 /**
  * Timezone endpoint - returns list of available timezones
  */
-const timezoneProcedure = publicProcedure.query(async () => {
+const timezoneProcedure = publicProcedure
+  .meta({ openapi: { method: 'GET', path: '/timezone', tags: ['System'] } })
+  .query(async () => {
   const timezones = await getTimezones();
   const timezoneList = timezones.map(tz => tz.timezone);
   
@@ -70,6 +77,7 @@ const timezoneProcedure = publicProcedure.query(async () => {
  * Countries endpoint - returns list of countries
  */
 const countriesProcedure = publicProcedure
+  .meta({ openapi: { method: 'GET', path: '/countries', tags: ['Core'] } })
   .input(
     z.object({
       name: z.string().optional(),
@@ -78,7 +86,7 @@ const countriesProcedure = publicProcedure
     }).optional()
   )
   .query(async ({ input }) => {
-    const countries = await getCountries(input);
+    const countries = await getCountries(input || {});
     const normalized = countries.map(normalizeCountry);
     
     return createApiResponse(normalized);
@@ -88,6 +96,7 @@ const countriesProcedure = publicProcedure
  * Leagues endpoint - returns list of leagues with seasons
  */
 const leaguesProcedure = publicProcedure
+  .meta({ openapi: { method: 'GET', path: '/leagues', tags: ['Core'] } })
   .input(
     z.object({
       id: z.number().optional(),
@@ -102,7 +111,7 @@ const leaguesProcedure = publicProcedure
     }).optional()
   )
   .query(async ({ input }) => {
-    const leaguesData = await getLeagues(input);
+    const leaguesData = await getLeagues(input || {});
     
     const normalized = leaguesData.map((data: any) =>
       normalizeLeague(data.league, data.country, data.seasons)
@@ -115,6 +124,7 @@ const leaguesProcedure = publicProcedure
  * Teams endpoint - returns list of teams with venue information
  */
 const teamsProcedure = publicProcedure
+  .meta({ openapi: { method: 'GET', path: '/teams', tags: ['Core'] } })
   .input(
     z.object({
       id: z.number().optional(),
@@ -128,7 +138,7 @@ const teamsProcedure = publicProcedure
     }).optional()
   )
   .query(async ({ input }) => {
-    const teamsData = await getTeams(input);
+    const teamsData = await getTeams(input || {});
     
     const normalized = teamsData.map((data: any) =>
       normalizeTeam(data.team, data.venue, data.country)
@@ -141,6 +151,7 @@ const teamsProcedure = publicProcedure
  * Standings endpoint - returns league standings
  */
 const standingsProcedure = publicProcedure
+  .meta({ openapi: { method: 'GET', path: '/standings', tags: ['Core'] } })
   .input(
     z.object({
       league: z.number(),
@@ -186,6 +197,7 @@ const standingsProcedure = publicProcedure
  * Injuries endpoint - returns list of injuries
  */
 const injuriesProcedure = publicProcedure
+  .meta({ openapi: { method: 'GET', path: '/injuries', tags: ['Core'] } })
   .input(
     z.object({
       fixture: z.number().optional(),
@@ -197,7 +209,7 @@ const injuriesProcedure = publicProcedure
     }).optional()
   )
   .query(async ({ input }) => {
-    const injuries = await getInjuries(input);
+    const injuries = await getInjuries(input || {});
     const normalized = injuries.map(i => normalizeInjury(i.injury, i.player, i.team, i.fixture, i.league, i.season));
     return createApiResponse(normalized);
   });
@@ -206,6 +218,7 @@ const injuriesProcedure = publicProcedure
  * Fixtures endpoint - returns list of fixtures with comprehensive filters
  */
 const fixturesProcedure = publicProcedure
+  .meta({ openapi: { method: 'GET', path: '/fixtures', tags: ['Fixtures'] } })
   .input(
     z.object({
       id: z.number().optional(),
@@ -226,7 +239,7 @@ const fixturesProcedure = publicProcedure
     }).optional()
   )
   .query(async ({ input }) => {
-    const fixturesData = await getFixtures(input);
+    const fixturesData = await getFixtures(input || {});
     
     // Fetch all unique team IDs
     const teamIds = new Set<number>();
@@ -329,6 +342,7 @@ const fixturesProcedure = publicProcedure
  * Players endpoint - returns list of players
  */
 const playersProcedure = publicProcedure
+  .meta({ openapi: { method: 'GET', path: '/players', tags: ['Core'] } })
   .input(
     z.object({
       id: z.number().optional(),
@@ -340,7 +354,7 @@ const playersProcedure = publicProcedure
     }).optional()
   )
   .query(async ({ input }) => {
-    const players = await getPlayers(input);
+    const players = await getPlayers(input || {});
     
     // TODO: Implement proper normalization with player statistics
     return createApiResponse(players);
@@ -350,6 +364,7 @@ const playersProcedure = publicProcedure
  * Fixtures Events endpoint - returns match events (goals, cards, substitutions)
  */
 const fixturesEventsProcedure = publicProcedure
+  .meta({ openapi: { method: 'GET', path: '/fixtures/events', tags: ['Fixtures'] } })
   .input(
     z.object({
       fixture: z.number().optional(),
@@ -398,6 +413,7 @@ const fixturesEventsProcedure = publicProcedure
  * Fixtures Lineups endpoint - returns team lineups and formations
  */
 const fixturesLineupsProcedure = publicProcedure
+  .meta({ openapi: { method: 'GET', path: '/fixtures/lineups', tags: ['Fixtures'] } })
   .input(
     z.object({
       fixture: z.number().optional(),
@@ -437,6 +453,7 @@ const fixturesLineupsProcedure = publicProcedure
  * Fixtures Statistics endpoint - returns detailed match statistics
  */
 const fixturesStatisticsProcedure = publicProcedure
+  .meta({ openapi: { method: 'GET', path: '/fixtures/statistics', tags: ['Fixtures'] } })
   .input(
     z.object({
       fixture: z.number().optional(),
@@ -531,6 +548,7 @@ export const footballRouter = router({
   
   // Remaining endpoints for full API-Football parity
   injuries: publicProcedure
+    .meta({ openapi: { method: 'GET', path: '/injuries', tags: ['Core'] } })
     .input(z.object({
       league: z.number().optional(),
       season: z.number().optional(),
@@ -544,7 +562,8 @@ export const footballRouter = router({
       try {
         const { getInjuries } = await import("./football-db");
         const results = await getInjuries(input || {});
-        return createApiResponse(results);
+        const normalized = results.map((r: any) => normalizeInjury(r.injury, r.player, r.team, r.fixture, r.league, r.season));
+        return createApiResponse(normalized);
       } catch (error) {
         const errorMsg = error instanceof Error ? error.message : String(error);
         return createApiResponse([], [errorMsg]);
@@ -552,6 +571,7 @@ export const footballRouter = router({
     }),
   
   transfers: publicProcedure
+    .meta({ openapi: { method: 'GET', path: '/transfers', tags: ['Core'] } })
     .input(z.object({
       player: z.number().optional(),
       team: z.number().optional(),
@@ -560,7 +580,8 @@ export const footballRouter = router({
       try {
         const { getTransfers } = await import("./football-db");
         const results = await getTransfers(input || {});
-        return createApiResponse(results);
+        const normalized = results.map((r: any) => normalizeTransfer(r.transfer, r.player, r.teamIn, r.teamOut));
+        return createApiResponse(normalized);
       } catch (error) {
         const errorMsg = error instanceof Error ? error.message : String(error);
         return createApiResponse([], [errorMsg]);
@@ -568,6 +589,7 @@ export const footballRouter = router({
     }),
   
   coachs: publicProcedure
+    .meta({ openapi: { method: 'GET', path: '/coachs', tags: ['Core'] } })
     .input(z.object({
       id: z.number().optional(),
       team: z.number().optional(),
@@ -577,7 +599,8 @@ export const footballRouter = router({
       try {
         const { getCoaches } = await import("./football-db");
         const results = await getCoaches(input || {});
-        return createApiResponse(results);
+        const normalized = results.map((r: any) => normalizeCoach(r.coach, r.team, r.career));
+        return createApiResponse(normalized);
       } catch (error) {
         const errorMsg = error instanceof Error ? error.message : String(error);
         return createApiResponse([], [errorMsg]);
@@ -585,6 +608,7 @@ export const footballRouter = router({
     }),
   
   trophies: publicProcedure
+    .meta({ openapi: { method: 'GET', path: '/trophies', tags: ['Core'] } })
     .input(z.object({
       player: z.number().optional(),
       coach: z.number().optional(),
@@ -593,7 +617,8 @@ export const footballRouter = router({
       try {
         const { getTrophies } = await import("./football-db");
         const results = await getTrophies(input || {});
-        return createApiResponse(results);
+        const normalized = results.map((t: any) => normalizeTrophy(t));
+        return createApiResponse(normalized);
       } catch (error) {
         const errorMsg = error instanceof Error ? error.message : String(error);
         return createApiResponse([], [errorMsg]);
