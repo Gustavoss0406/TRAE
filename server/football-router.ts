@@ -7,7 +7,7 @@
 
 import { z } from "zod";
 import { publicProcedure, router } from "./_core/trpc";
-import { oddsAndPredictionsRouter } from "./odds-predictions-router";
+import { oddsProcedure, predictionsProcedure } from "./odds-predictions-router";
 import {
   getCountries,
   getTimezones,
@@ -626,6 +626,6 @@ export const footballRouter = router({
     }),
   
   // Odds and Predictions endpoints
-  odds: oddsAndPredictionsRouter.odds,
-  predictions: oddsAndPredictionsRouter.predictions,
+  odds: oddsProcedure,
+  predictions: predictionsProcedure,
 });
