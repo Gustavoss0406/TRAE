@@ -1,0 +1,1916 @@
+{
+  "get": "players",
+  "parameters": {
+    "league": "39",
+    "season": "2024",
+    "team": "33"
+  },
+  "errors": [],
+  "results": 20,
+  "paging": {
+    "current": 1,
+    "total": 4
+  },
+  "response": [
+    {
+      "player": {
+        "id": 908,
+        "name": "A. Martial",
+        "firstname": "Anthony Jordan",
+        "lastname": "Martial",
+        "age": 30,
+        "birth": {
+          "date": "1995-12-05",
+          "place": "Massy",
+          "country": "France"
+        },
+        "nationality": "France",
+        "height": "181",
+        "weight": "76",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/908.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": null,
+            "lineups": null,
+            "minutes": null,
+            "number": null,
+            "position": "Attacker",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": null,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": null,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": null,
+            "yellowred": null,
+            "red": null
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": null,
+            "missed": null,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 284242,
+        "name": "O. Forson",
+        "firstname": "Omari Nathan",
+        "lastname": "Forson",
+        "age": 21,
+        "birth": {
+          "date": "2004-07-20",
+          "place": null,
+          "country": "England"
+        },
+        "nationality": "England",
+        "height": "179",
+        "weight": "74",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/284242.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": null,
+            "lineups": null,
+            "minutes": null,
+            "number": null,
+            "position": "Attacker",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": null,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": null,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": null,
+            "yellowred": null,
+            "red": null
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": null,
+            "missed": null,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 74,
+        "name": "S. Amrabat",
+        "firstname": "Sofyan",
+        "lastname": "Amrabat",
+        "age": 29,
+        "birth": {
+          "date": "1996-08-21",
+          "place": "Huizen",
+          "country": "Netherlands"
+        },
+        "nationality": "Morocco",
+        "height": "183",
+        "weight": "82",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/74.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": null,
+            "lineups": null,
+            "minutes": null,
+            "number": null,
+            "position": "Midfielder",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": null,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": null,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": null,
+            "yellowred": null,
+            "red": null
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": null,
+            "missed": null,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 742,
+        "name": "R. Varane",
+        "firstname": "Raphaël Xavier",
+        "lastname": "Varane",
+        "age": 31,
+        "birth": {
+          "date": "1993-04-25",
+          "place": "Lille",
+          "country": "France"
+        },
+        "nationality": "France",
+        "height": "191 cm",
+        "weight": "81 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/742.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": null,
+            "lineups": null,
+            "minutes": null,
+            "number": null,
+            "position": "Defender",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": null,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": null,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": null,
+            "yellowred": null,
+            "red": null
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": null,
+            "missed": null,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 739,
+        "name": "Reguilón",
+        "firstname": "Sergio",
+        "lastname": "Reguilón Rodríguez",
+        "age": 29,
+        "birth": {
+          "date": "1996-12-16",
+          "place": "Madrid",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "178 cm",
+        "weight": "68 kg",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/739.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": null,
+            "lineups": null,
+            "minutes": null,
+            "number": null,
+            "position": "Defender",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": null,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": null,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": null,
+            "yellowred": null,
+            "red": null
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": null,
+            "missed": null,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 897,
+        "name": "M. Greenwood",
+        "firstname": "Mason Will John",
+        "lastname": "Greenwood",
+        "age": 24,
+        "birth": {
+          "date": "2001-10-01",
+          "place": "Bradford",
+          "country": "England"
+        },
+        "nationality": "England",
+        "height": "181",
+        "weight": "70",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/897.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": null,
+            "lineups": null,
+            "minutes": null,
+            "number": null,
+            "position": "Attacker",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": null,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": null,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": null,
+            "yellowred": null,
+            "red": null
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": null,
+            "missed": null,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 330636,
+        "name": "Sonny Aljofree",
+        "firstname": "Sonny",
+        "lastname": "Aljofree",
+        "age": 21,
+        "birth": {
+          "date": "2004-12-19",
+          "place": "Plymouth",
+          "country": "England"
+        },
+        "nationality": "England",
+        "height": "186",
+        "weight": null,
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/330636.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": null,
+            "lineups": null,
+            "minutes": null,
+            "number": null,
+            "position": "Defender",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": null,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": null,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": null,
+            "yellowred": null,
+            "red": null
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": null,
+            "missed": null,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 365664,
+        "name": "Ethan Williams",
+        "firstname": "Ethan",
+        "lastname": "Williams",
+        "age": 20,
+        "birth": {
+          "date": "2005-11-14",
+          "place": "Manchester",
+          "country": "England"
+        },
+        "nationality": "England",
+        "height": null,
+        "weight": null,
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/365664.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": null,
+            "lineups": null,
+            "minutes": null,
+            "number": null,
+            "position": "Attacker",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": null,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": null,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": null,
+            "yellowred": null,
+            "red": null
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": null,
+            "missed": null,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 303016,
+        "name": "M. Oyedele",
+        "firstname": "Maximillian",
+        "lastname": "Oyedele",
+        "age": 21,
+        "birth": {
+          "date": "2004-11-07",
+          "place": "Manchester",
+          "country": "England"
+        },
+        "nationality": "Poland",
+        "height": "180",
+        "weight": "70",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/303016.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": null,
+            "lineups": null,
+            "minutes": null,
+            "number": null,
+            "position": "Midfielder",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": null,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": null,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": null,
+            "yellowred": null,
+            "red": null
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": null,
+            "missed": null,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 284307,
+        "name": "Ethan Ennis",
+        "firstname": "Ethan",
+        "lastname": "Ennis",
+        "age": 21,
+        "birth": {
+          "date": "2004-12-11",
+          "place": "Runcorn",
+          "country": "England"
+        },
+        "nationality": "England",
+        "height": "178",
+        "weight": null,
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/284307.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": null,
+            "lineups": null,
+            "minutes": null,
+            "number": null,
+            "position": "Attacker",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": null,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": null,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": null,
+            "yellowred": null,
+            "red": null
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": null,
+            "missed": null,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 303017,
+        "name": "Samuel Mather",
+        "firstname": "Samuel",
+        "lastname": "Mather",
+        "age": 21,
+        "birth": {
+          "date": "2004-09-03",
+          "place": null,
+          "country": "England"
+        },
+        "nationality": "England",
+        "height": null,
+        "weight": null,
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/303017.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": null,
+            "lineups": null,
+            "minutes": null,
+            "number": null,
+            "position": "Attacker",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": null,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": null,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": null,
+            "yellowred": null,
+            "red": null
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": null,
+            "missed": null,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 284391,
+        "name": "S. Murray",
+        "firstname": "Sam",
+        "lastname": "Murray",
+        "age": 21,
+        "birth": {
+          "date": "2004-09-25",
+          "place": null,
+          "country": "England"
+        },
+        "nationality": "England",
+        "height": null,
+        "weight": null,
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/284391.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": null,
+            "lineups": null,
+            "minutes": null,
+            "number": null,
+            "position": "Defender",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": null,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": null,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": null,
+            "yellowred": null,
+            "red": null
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": null,
+            "missed": null,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 153434,
+        "name": "W. Fish",
+        "firstname": "William Thomas",
+        "lastname": "Fish",
+        "age": 22,
+        "birth": {
+          "date": "2003-02-17",
+          "place": null,
+          "country": "England"
+        },
+        "nationality": "England",
+        "height": "185",
+        "weight": null,
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/153434.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": null,
+            "lineups": null,
+            "minutes": null,
+            "number": null,
+            "position": "Defender",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": null,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": null,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": null,
+            "yellowred": null,
+            "red": null
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": null,
+            "missed": null,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 889,
+        "name": "V. Lindelöf",
+        "firstname": "Victor Jörgen",
+        "lastname": "Nilsson Lindelöf",
+        "age": 31,
+        "birth": {
+          "date": "1994-07-17",
+          "place": "Västerås",
+          "country": "Sweden"
+        },
+        "nationality": "Sweden",
+        "height": "187",
+        "weight": "80",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/889.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": 16,
+            "lineups": 6,
+            "minutes": 693,
+            "number": null,
+            "position": "Defender",
+            "rating": "6.671428",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 10,
+            "out": 1,
+            "bench": 17
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": 0,
+            "saves": null
+          },
+          "passes": {
+            "total": 380,
+            "key": 3,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": 7,
+            "blocks": 4,
+            "interceptions": 8
+          },
+          "duels": {
+            "total": 50,
+            "won": 25
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 1,
+            "committed": 8
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 284324,
+        "name": "A. Garnacho",
+        "firstname": "Alejandro",
+        "lastname": "Garnacho Ferreyra",
+        "age": 21,
+        "birth": {
+          "date": "2004-07-01",
+          "place": "Madrid",
+          "country": "Spain"
+        },
+        "nationality": "Argentina",
+        "height": "180",
+        "weight": "73",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/284324.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": 36,
+            "lineups": 23,
+            "minutes": 2196,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.797222",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 13,
+            "out": 9,
+            "bench": 13
+          },
+          "shots": {
+            "total": 55,
+            "on": 30
+          },
+          "goals": {
+            "total": 6,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 750,
+            "key": 37,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": 30,
+            "blocks": null,
+            "interceptions": 13
+          },
+          "duels": {
+            "total": 265,
+            "won": 102
+          },
+          "dribbles": {
+            "attempts": 81,
+            "success": 26,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 43,
+            "committed": 12
+          },
+          "cards": {
+            "yellow": 3,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 402329,
+        "name": "A. Heaven",
+        "firstname": "Ayden",
+        "lastname": "Heaven",
+        "age": 19,
+        "birth": {
+          "date": "2006-09-22",
+          "place": "London",
+          "country": "England"
+        },
+        "nationality": "England",
+        "height": "189",
+        "weight": "77",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/402329.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": 4,
+            "lineups": 2,
+            "minutes": 170,
+            "number": null,
+            "position": "Defender",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": 2,
+            "out": 2,
+            "bench": 6
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 526,
+        "name": "A. Onana",
+        "firstname": "André",
+        "lastname": "Onana Onana",
+        "age": 29,
+        "birth": {
+          "date": "1996-04-02",
+          "place": "Nkol Ngok",
+          "country": "Cameroon"
+        },
+        "nationality": "Cameroon",
+        "height": "190",
+        "weight": "93",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/526.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": 34,
+            "lineups": 34,
+            "minutes": 3060,
+            "number": null,
+            "position": "Goalkeeper",
+            "rating": "6.900000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": 44,
+            "assists": 0,
+            "saves": 90
+          },
+          "passes": {
+            "total": 1165,
+            "key": 1,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": 2,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 13,
+            "won": 11
+          },
+          "dribbles": {
+            "attempts": 1,
+            "success": 1,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 2,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": null,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": 0
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 2931,
+        "name": "T. Heaton",
+        "firstname": "Thomas David",
+        "lastname": "Heaton",
+        "age": 39,
+        "birth": {
+          "date": "1986-04-15",
+          "place": "Chester",
+          "country": "England"
+        },
+        "nationality": "England",
+        "height": "188",
+        "weight": "85",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/2931.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": 0,
+            "lineups": 0,
+            "minutes": 0,
+            "number": null,
+            "position": "Goalkeeper",
+            "rating": null,
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 0,
+            "bench": 8
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": null,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": null,
+            "won": null
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": 0
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 50132,
+        "name": "A. Bayındır",
+        "firstname": "Altay",
+        "lastname": "Bayındır",
+        "age": 27,
+        "birth": {
+          "date": "1998-04-14",
+          "place": "Bursa",
+          "country": "Türkiye"
+        },
+        "nationality": "Türkiye",
+        "height": "198",
+        "weight": "88",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/50132.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": 31,
+            "lineups": 17,
+            "minutes": 360,
+            "number": null,
+            "position": "Goalkeeper",
+            "rating": "6.400000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 14,
+            "out": null,
+            "bench": null
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": null,
+            "conceded": 10,
+            "assists": 0,
+            "saves": 8
+          },
+          "passes": {
+            "total": 140,
+            "key": null,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 4,
+            "won": 2
+          },
+          "dribbles": {
+            "attempts": null,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 1,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": null,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": 0
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 37145,
+        "name": "T. Malacia",
+        "firstname": "Tyrell Johannes Chicco",
+        "lastname": "Malacia",
+        "age": 26,
+        "birth": {
+          "date": "1999-08-17",
+          "place": "Rotterdam",
+          "country": "Netherlands"
+        },
+        "nationality": "Netherlands",
+        "height": "170",
+        "weight": "67",
+        "injured": false,
+        "photo": "https://media.api-sports.io/football/players/37145.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://media.api-sports.io/football/teams/33.png"
+          },
+          "league": {
+            "id": 39,
+            "name": "Premier League",
+            "country": "England",
+            "logo": "https://media.api-sports.io/football/leagues/39.png",
+            "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+            "season": 2024
+          },
+          "games": {
+            "appearences": 3,
+            "lineups": 2,
+            "minutes": 101,
+            "number": null,
+            "position": "Defender",
+            "rating": "6.566666",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 2,
+            "bench": 9
+          },
+          "shots": {
+            "total": null,
+            "on": null
+          },
+          "goals": {
+            "total": 0,
+            "conceded": 0,
+            "assists": 0,
+            "saves": null
+          },
+          "passes": {
+            "total": 48,
+            "key": 1,
+            "accuracy": null
+          },
+          "tackles": {
+            "total": 2,
+            "blocks": null,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 11,
+            "won": 5
+          },
+          "dribbles": {
+            "attempts": 1,
+            "success": 1,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 2,
+            "committed": 3
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "query": "SELECT f.id, f.date, t1.name as home_team, t2.name as away_team, l.name as league\nFROM fixtures f\nJOIN teams t1 ON f.homeTeamId = t1.id\nJOIN teams t2 ON f.awayTeamId = t2.id\nJOIN leagues l ON f.leagueId = l.id\nWHERE DATE(f.date) = '2026-02-02'\nLIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 19iLEYK5xVcJkRu.root --database iPoAWkYDjVf6EgjC7ZwEhi --execute SELECT f.id, f.date, t1.name as home_team, t2.name as away_team, l.name as league\nFROM fixtures f\nJOIN teams t1 ON f.homeTeamId = t1.id\nJOIN teams t2 ON f.awayTeamId = t2.id\nJOIN leagues l ON f.leagueId = l.id\nWHERE DATE(f.date) = '2026-02-02'\nLIMIT 10;",
+  "rows": [
+    {
+      "id": "1004",
+      "date": "2026-02-02 16:23:50",
+      "home_team": "Liverpool",
+      "away_team": "Arsenal",
+      "league": "Premier League"
+    },
+    {
+      "id": "1034",
+      "date": "2026-02-02 13:45:00",
+      "home_team": "AVS",
+      "away_team": "Sporting Clube de Braga",
+      "league": "Primeira Liga"
+    },
+    {
+      "id": "1035",
+      "date": "2026-02-02 14:45:00",
+      "home_team": "Udinese Calcio",
+      "away_team": "AS Roma",
+      "league": "Serie A"
+    },
+    {
+      "id": "1036",
+      "date": "2026-02-02 15:00:00",
+      "home_team": "Sunderland AFC",
+      "away_team": "Burnley FC",
+      "league": "Premier League"
+    },
+    {
+      "id": "1037",
+      "date": "2026-02-02 15:00:00",
+      "home_team": "RCD Mallorca",
+      "away_team": "Sevilla FC",
+      "league": "Primera Division"
+    },
+    {
+      "id": "1038",
+      "date": "2026-02-02 15:45:00",
+      "home_team": "Casa Pia AC",
+      "away_team": "FC Porto",
+      "league": "Primeira Liga"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tdate\thome_team\taway_team\tleague\n1004\t2026-02-02 16:23:50\tLiverpool\tArsenal\tPremier League\n1034\t2026-02-02 13:45:00\tAVS\tSporting Clube de Braga\tPrimeira Liga\n1035\t2026-02-02 14:45:00\tUdinese Calcio\tAS Roma\tSerie A\n1036\t2026-02-02 15:00:00\tSunderland AFC\tBurnley FC\tPremier League\n1037\t2026-02-02 15:00:00\tRCD Mallorca\tSevilla FC\tPrimera Division\n1038\t2026-02-02 15:45:00\tCasa Pia AC\tFC Porto\tPrimeira Liga\n",
+  "stderr": "",
+  "execution_time_ms": 360
+}

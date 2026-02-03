@@ -1,0 +1,15 @@
+{
+  "query": "SELECT \n  (SELECT COUNT(*) FROM fixtures) as fixtures_count,\n  (SELECT COUNT(*) FROM teams) as teams_count,\n  (SELECT COUNT(*) FROM leagues) as leagues_count;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 19iLEYK5xVcJkRu.root --database iPoAWkYDjVf6EgjC7ZwEhi --execute SELECT \n  (SELECT COUNT(*) FROM fixtures) as fixtures_count,\n  (SELECT COUNT(*) FROM teams) as teams_count,\n  (SELECT COUNT(*) FROM leagues) as leagues_count;",
+  "rows": [
+    {
+      "fixtures_count": "235",
+      "teams_count": "1261",
+      "leagues_count": "17"
+    }
+  ],
+  "messages": [],
+  "stdout": "fixtures_count\tteams_count\tleagues_count\n235\t1261\t17\n",
+  "stderr": "",
+  "execution_time_ms": 371
+}

@@ -1,0 +1,54 @@
+{
+  "query": "SELECT \n  l.name as league_name,\n  COUNT(f.id) as matches_count\nFROM fixtures f\nJOIN leagues l ON f.leagueId = l.id\nGROUP BY l.id, l.name\nORDER BY matches_count DESC\nLIMIT 15;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 19iLEYK5xVcJkRu.root --database iPoAWkYDjVf6EgjC7ZwEhi --execute SELECT \n  l.name as league_name,\n  COUNT(f.id) as matches_count\nFROM fixtures f\nJOIN leagues l ON f.leagueId = l.id\nGROUP BY l.id, l.name\nORDER BY matches_count DESC\nLIMIT 15;",
+  "rows": [
+    {
+      "league_name": "UEFA Champions League",
+      "matches_count": "36"
+    },
+    {
+      "league_name": "Championship",
+      "matches_count": "26"
+    },
+    {
+      "league_name": "Premier League",
+      "matches_count": "23"
+    },
+    {
+      "league_name": "Bundesliga",
+      "matches_count": "23"
+    },
+    {
+      "league_name": "Primera Division",
+      "matches_count": "22"
+    },
+    {
+      "league_name": "Serie A",
+      "matches_count": "21"
+    },
+    {
+      "league_name": "Eredivisie",
+      "matches_count": "21"
+    },
+    {
+      "league_name": "Campeonato Brasileiro Série A",
+      "matches_count": "20"
+    },
+    {
+      "league_name": "Ligue 1",
+      "matches_count": "19"
+    },
+    {
+      "league_name": "Primeira Liga",
+      "matches_count": "18"
+    },
+    {
+      "league_name": "Premier League",
+      "matches_count": "6"
+    }
+  ],
+  "messages": [],
+  "stdout": "league_name\tmatches_count\nUEFA Champions League\t36\nChampionship\t26\nPremier League\t23\nBundesliga\t23\nPrimera Division\t22\nSerie A\t21\nEredivisie\t21\nCampeonato Brasileiro Série A\t20\nLigue 1\t19\nPrimeira Liga\t18\nPremier League\t6\n",
+  "stderr": "",
+  "execution_time_ms": 344
+}

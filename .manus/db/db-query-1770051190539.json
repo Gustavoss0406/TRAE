@@ -1,0 +1,18 @@
+{
+  "query": "SELECT COLUMN_NAME, TABLE_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE COLUMN_NAME = 'apiFootballId' AND TABLE_SCHEMA = DATABASE();",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 19iLEYK5xVcJkRu.root --database iPoAWkYDjVf6EgjC7ZwEhi --execute SELECT COLUMN_NAME, TABLE_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE COLUMN_NAME = 'apiFootballId' AND TABLE_SCHEMA = DATABASE();",
+  "rows": [
+    {
+      "COLUMN_NAME": "apiFootballId",
+      "TABLE_NAME": "leagues"
+    },
+    {
+      "COLUMN_NAME": "apiFootballId",
+      "TABLE_NAME": "teams"
+    }
+  ],
+  "messages": [],
+  "stdout": "COLUMN_NAME\tTABLE_NAME\napiFootballId\tleagues\napiFootballId\tteams\n",
+  "stderr": "",
+  "execution_time_ms": 354
+}
