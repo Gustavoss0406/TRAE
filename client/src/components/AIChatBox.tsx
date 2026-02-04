@@ -100,7 +100,7 @@ export type AIChatBoxProps = {
  *     <AIChatBox
  *       messages={messages}
  *       onSendMessage={handleSend}
- *       isLoading={chatMutation.isPending}
+ *       isLoading={chatMutation.isLoading}
  *       suggestedPrompts={[
  *         "Explain quantum computing",
  *         "Write a hello world in Python"

@@ -63,14 +63,18 @@ async function startServer() {
   );
 
   // Swagger UI
-  const openApiDocument = generateOpenApiDocument(appRouter, {
-    title: "Football Data Platform API",
-    description: "Comprehensive football data API",
-    version: "1.0.0",
-    baseUrl: process.env.VITE_API_URL || "http://localhost:3000/api",
-  });
+  try {
+    const openApiDocument = generateOpenApiDocument(appRouter, {
+      title: "Football Data Platform API",
+      description: "Comprehensive football data API",
+      version: "1.0.0",
+      baseUrl: process.env.VITE_API_URL || "http://localhost:3000/api",
+    });
 
-  app.use("/docs", swaggerUi.serve, swaggerUi.setup(openApiDocument));
+    app.use("/docs", swaggerUi.serve, swaggerUi.setup(openApiDocument));
+  } catch (error) {
+    console.warn("Failed to generate OpenAPI document. Swagger UI will be unavailable.", error);
+  }
 
   // development mode uses Vite, production mode uses static files
   if (process.env.NODE_ENV === "development") {

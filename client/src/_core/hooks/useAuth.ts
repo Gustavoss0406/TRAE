@@ -48,7 +48,7 @@ export function useAuth(options?: UseAuthOptions) {
     );
     return {
       user: meQuery.data ?? null,
-      loading: meQuery.isLoading || logoutMutation.isPending,
+      loading: meQuery.isLoading || logoutMutation.isLoading,
       error: meQuery.error ?? logoutMutation.error ?? null,
       isAuthenticated: Boolean(meQuery.data),
     };
@@ -57,12 +57,12 @@ export function useAuth(options?: UseAuthOptions) {
     meQuery.error,
     meQuery.isLoading,
     logoutMutation.error,
-    logoutMutation.isPending,
+    logoutMutation.isLoading,
   ]);
 
   useEffect(() => {
     if (!redirectOnUnauthenticated) return;
-    if (meQuery.isLoading || logoutMutation.isPending) return;
+    if (meQuery.isLoading || logoutMutation.isLoading) return;
     if (state.user) return;
     if (typeof window === "undefined") return;
     if (window.location.pathname === redirectPath) return;
@@ -71,7 +71,7 @@ export function useAuth(options?: UseAuthOptions) {
   }, [
     redirectOnUnauthenticated,
     redirectPath,
-    logoutMutation.isPending,
+    logoutMutation.isLoading,
     meQuery.isLoading,
     state.user,
   ]);
