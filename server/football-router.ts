@@ -42,6 +42,8 @@ import { CACHE_TTL, cacheMiddleware } from "./_core/cache";
  */
 const statusProcedure = publicProcedure
   .meta({ openapi: { method: 'GET', path: '/status', tags: ['System'] } })
+  .input(z.object({}).optional())
+  .output(z.any())
   .query(async () => {
   return createApiResponse({
     account: {
@@ -66,6 +68,8 @@ const statusProcedure = publicProcedure
  */
 const timezoneProcedure = publicProcedure
   .meta({ openapi: { method: 'GET', path: '/timezone', tags: ['System'] } })
+  .input(z.object({}).optional())
+  .output(z.any())
   .query(async () => {
   const timezones = await getTimezones();
   const timezoneList = timezones.map(tz => tz.timezone);
@@ -85,6 +89,7 @@ const countriesProcedure = publicProcedure
       search: z.string().optional(),
     }).optional()
   )
+  .output(z.any())
   .query(async ({ input }) => {
     const countries = await getCountries(input || {});
     const normalized = countries.map(normalizeCountry);
@@ -110,6 +115,7 @@ const leaguesProcedure = publicProcedure
       search: z.string().optional(),
     }).optional()
   )
+  .output(z.any())
   .query(async ({ input }) => {
     const leaguesData = await getLeagues(input || {});
     
@@ -137,6 +143,7 @@ const teamsProcedure = publicProcedure
       search: z.string().optional(),
     }).optional()
   )
+  .output(z.any())
   .query(async ({ input }) => {
     const teamsData = await getTeams(input || {});
     
@@ -159,6 +166,7 @@ const standingsProcedure = publicProcedure
       team: z.number().optional(),
     })
   )
+  .output(z.any())
   .query(async ({ input }) => {
     const standingsData = await getStandings(input);
     
@@ -208,6 +216,7 @@ const injuriesProcedure = publicProcedure
       date: z.string().optional(),
     }).optional()
   )
+  .output(z.object({}).passthrough())
   .query(async ({ input }) => {
     const injuries = await getInjuries(input || {});
     const normalized = injuries.map(i => normalizeInjury(i.injury, i.player, i.team, i.fixture, i.league, i.season));
@@ -222,7 +231,7 @@ const fixturesProcedure = publicProcedure
   .input(
     z.object({
       id: z.number().optional(),
-      ids: z.array(z.number()).optional(),
+      ids: z.string().optional(),
       live: z.string().optional(),
       date: z.string().optional(),
       league: z.number().optional(),
@@ -238,8 +247,20 @@ const fixturesProcedure = publicProcedure
       timezone: z.string().optional(),
     }).optional()
   )
+  .output(z.any())
   .query(async ({ input }) => {
-    const fixturesData = await getFixtures(input || {});
+    // Parse ids string to array of numbers
+    const parsedInput = { ...input };
+    let idsArray: number[] | undefined;
+    
+    if (input?.ids) {
+      idsArray = input.ids.split(/[-,]/).map(id => parseInt(id.trim())).filter(id => !isNaN(id));
+    }
+    
+    const fixturesData = await getFixtures({
+      ...parsedInput,
+      ids: idsArray
+    } as any);
     
     // Fetch all unique team IDs
     const teamIds = new Set<number>();
@@ -353,6 +374,7 @@ const playersProcedure = publicProcedure
       search: z.string().optional(),
     }).optional()
   )
+  .output(z.any())
   .query(async ({ input }) => {
     const players = await getPlayers(input || {});
     
@@ -370,6 +392,7 @@ const fixturesEventsProcedure = publicProcedure
       fixture: z.number().optional(),
     }).optional()
   )
+  .output(z.any())
   .query(async ({ input }) => {
     if (!input?.fixture) {
       return createApiResponse([]);
@@ -420,6 +443,7 @@ const fixturesLineupsProcedure = publicProcedure
       team: z.number().optional(),
     }).optional()
   )
+  .output(z.any())
   .query(async ({ input }) => {
     if (!input?.fixture) {
       return createApiResponse([]);
@@ -460,6 +484,7 @@ const fixturesStatisticsProcedure = publicProcedure
       team: z.number().optional(),
     }).optional()
   )
+  .output(z.any())
   .query(async ({ input }) => {
     if (!input?.fixture) {
       return createApiResponse([]);
@@ -558,6 +583,7 @@ export const footballRouter = router({
       date: z.string().optional(),
       timezone: z.string().optional(),
     }).optional())
+    .output(z.any())
     .query(async ({ input }) => {
       try {
         const { getInjuries } = await import("./football-db");
@@ -576,6 +602,7 @@ export const footballRouter = router({
       player: z.number().optional(),
       team: z.number().optional(),
     }).optional())
+    .output(z.any())
     .query(async ({ input }) => {
       try {
         const { getTransfers } = await import("./football-db");
@@ -595,6 +622,7 @@ export const footballRouter = router({
       team: z.number().optional(),
       search: z.string().optional(),
     }).optional())
+    .output(z.any())
     .query(async ({ input }) => {
       try {
         const { getCoaches } = await import("./football-db");
@@ -613,6 +641,7 @@ export const footballRouter = router({
       player: z.number().optional(),
       coach: z.number().optional(),
     }).optional())
+    .output(z.any())
     .query(async ({ input }) => {
       try {
         const { getTrophies } = await import("./football-db");

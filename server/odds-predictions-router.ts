@@ -30,6 +30,7 @@ export const oddsProcedure = publicProcedure
       bet: z.string().optional(),
     })
   )
+  .output(z.any())
   .query(async ({ input = {} }) => {
     try {
       // If fixture is provided, generate odds on-the-fly using Poisson model
@@ -289,6 +290,7 @@ export const predictionsProcedure = publicProcedure
       season: z.number().optional(),
     })
   )
+  .output(z.any())
   .query(async ({ input = {} }) => {
     try {
       // If fixture is provided, generate prediction on-the-fly using ELO model

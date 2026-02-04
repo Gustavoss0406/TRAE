@@ -2,7 +2,7 @@
 import "dotenv/config";
 import { getDb } from "../server/db";
 import * as schema from "../drizzle/schema";
-import { eq } from "drizzle-orm";
+import { eq, and } from "drizzle-orm";
 
 async function main() {
   const db = await getDb();
@@ -42,6 +42,8 @@ async function main() {
       { id: 39, name: "Premier League", type: "League", logo: "https://media.api-sports.io/football/leagues/39.png" },
       { id: 140, name: "La Liga", type: "League", logo: "https://media.api-sports.io/football/leagues/140.png" },
       { id: 78, name: "Bundesliga", type: "League", logo: "https://media.api-sports.io/football/leagues/78.png" },
+      { id: 135, name: "Serie A", type: "League", logo: "https://media.api-sports.io/football/leagues/135.png" },
+      { id: 61, name: "Ligue 1", type: "League", logo: "https://media.api-sports.io/football/leagues/61.png" },
     ];
     
     for (const league of leagueData) {
@@ -89,12 +91,12 @@ async function main() {
       
       leagueMap.set(league.id, leagueId);
       
-      // Create current season
+      // Create current season 2026
       await db.insert(schema.seasons).values({
         leagueId: leagueId,
-        year: 2024,
-        start: new Date("2024-08-01"),
-        end: new Date("2025-05-31"),
+        year: 2026,
+        start: new Date("2026-08-01"),
+        end: new Date("2027-05-31"),
         current: true,
         coverageFixturesEvents: true,
         coverageFixturesLineups: true,
@@ -128,6 +130,12 @@ async function main() {
       { id: 541, name: "Real Madrid", code: "RMA", logo: "https://media.api-sports.io/football/teams/541.png", venue: "Santiago Bernabéu", countryId: 1 },
       // Bundesliga
       { id: 157, name: "Bayern Munich", code: "BAY", logo: "https://media.api-sports.io/football/teams/157.png", venue: "Allianz Arena", countryId: 1 },
+      { id: 165, name: "Borussia Dortmund", code: "BVB", logo: "https://media.api-sports.io/football/teams/165.png", venue: "Signal Iduna Park", countryId: 1 },
+      // Serie A
+      { id: 496, name: "Juventus", code: "JUV", logo: "https://media.api-sports.io/football/teams/496.png", venue: "Allianz Stadium", countryId: 1 },
+      { id: 489, name: "AC Milan", code: "MIL", logo: "https://media.api-sports.io/football/teams/489.png", venue: "San Siro", countryId: 1 },
+      // Ligue 1
+      { id: 85, name: "PSG", code: "PSG", logo: "https://media.api-sports.io/football/teams/85.png", venue: "Parc des Princes", countryId: 1 },
     ];
     
     for (const team of teamsData) {
