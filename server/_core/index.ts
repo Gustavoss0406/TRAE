@@ -68,7 +68,7 @@ async function startServer() {
       title: "Football Data Platform API",
       description: "Comprehensive football data API",
       version: "1.0.0",
-      baseUrl: process.env.VITE_API_URL || "http://localhost:3000/api",
+      baseUrl: process.env.VITE_API_URL || (process.env.RENDER_EXTERNAL_URL ? `${process.env.RENDER_EXTERNAL_URL}/api` : "http://localhost:3000/api"),
     });
 
     app.use("/docs", swaggerUi.serve, swaggerUi.setup(openApiDocument));

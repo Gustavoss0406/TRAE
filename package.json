@@ -47,9 +47,9 @@
     "@radix-ui/react-toggle-group": "^1.1.11",
     "@radix-ui/react-tooltip": "^1.2.8",
     "@tanstack/react-query": "^4.36.1",
-    "@trpc/client": "^10.45.2",
-    "@trpc/react-query": "^10.45.2",
-    "@trpc/server": "^10.45.2",
+    "@trpc/client": "10.45.2",
+    "@trpc/react-query": "10.45.2",
+    "@trpc/server": "10.45.2",
     "@types/swagger-ui-express": "^4.1.8",
     "axios": "^1.12.0",
     "cheerio": "^1.2.0",
@@ -85,7 +85,7 @@
     "tailwindcss-animate": "^1.0.7",
     "trpc-openapi": "^1.2.0",
     "vaul": "^1.1.2",
-    "wouter": "^3.3.5",
+    "wouter": "3.7.1",
     "zod": "^3.24.1"
   },
   "devDependencies": {
@@ -121,7 +121,10 @@
       "wouter@3.7.1": "patches/wouter@3.7.1.patch"
     },
     "overrides": {
-      "tailwindcss>nanoid": "3.3.7"
+      "tailwindcss>nanoid": "3.3.7",
+      "@trpc/server": "10.45.2",
+      "@trpc/client": "10.45.2",
+      "@trpc/react-query": "10.45.2"
     },
     "trustedDependencies": [
       "@tailwindcss/oxide",
